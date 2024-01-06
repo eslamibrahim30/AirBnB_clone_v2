@@ -17,6 +17,7 @@ sudo tee -a "/data/web_static/releases/test/index.html" << END
 END
 sudo ln -s /data/web_static/current /data/web_static/releases/test/
 sudo chown -hR ubuntu:ubuntu /data/
+sudo chmod -R +666 /data
 sudo sed -i '/server_name _;/a \\n    location \/hbnb_static {\n        root /data/web_static/current/;\n    }\n' /etc/nginx/sites-available/default
 sudo service nginx restart
 exit 0
