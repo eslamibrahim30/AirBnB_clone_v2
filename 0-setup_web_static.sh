@@ -4,8 +4,8 @@ if command -v nginx &> /dev/null; then
 	sudo apt-get update
 	sudo apt-get install -y nginx
 fi
-sudo mkdir -p "/data/web_static/shared/"
-sudo mkdir -p "/data/web_static/releases/test/"
+sudo mkdir -p /data/web_static/shared/
+sudo mkdir -p /data/web_static/releases/test/
 sudo touch /data/web_static/releases/test/index.html
 sudo tee -a "/data/web_static/releases/test/index.html" << END
 <html>
